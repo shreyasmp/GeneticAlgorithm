@@ -7,8 +7,7 @@
 
 public class SalesmanProblem {
 
-    public static void main(String[] args) {
-
+    private static void createAndAddCities() {
         // create and add cities
 
         City city = new City(60, 200);
@@ -54,7 +53,9 @@ public class SalesmanProblem {
         TourManager.addCity(city19);
         City city20 = new City(160, 20);
         TourManager.addCity(city20);
+    }
 
+    private static Population initializePopulation() {
         // initialise population
         Population pop = new Population(50, true);
         System.out.println("Initial Distance: " + pop.getFittest().getDistance());
@@ -64,12 +65,18 @@ public class SalesmanProblem {
         for (int i = 0; i < 100; i++) {
             pop = GeneticAlgorithm.evolvePopulation(pop);
         }
+        return pop;
+    }
+
+    public static void main(String[] args) {
+
+        createAndAddCities();
 
         // print final results
         System.out.println("Finished");
-        System.out.println("Final distance: " + pop.getFittest().getDistance());
+        System.out.println("Final distance: " + initializePopulation().getFittest().getDistance());
         System.out.println("Solution: ");
-        System.out.println(pop.getFittest());
+        System.out.println(initializePopulation().getFittest());
 
     } // End main method
 } // End main class
