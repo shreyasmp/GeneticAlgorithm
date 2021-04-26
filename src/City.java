@@ -35,11 +35,11 @@ public class City {
     }
 
     // gets distance to given city
-    public double distanceTo(City city) {
+    public long distanceTo(City city) {
         int xDistance = Math.abs(getX() - city.getX());
         int yDistance = Math.abs(getY() - city.getY());
 
-        return Math.sqrt((xDistance * xDistance) + (yDistance * yDistance));
+        return (long) Math.sqrt((xDistance * xDistance) + (yDistance * yDistance));
     }
 
     @Override
