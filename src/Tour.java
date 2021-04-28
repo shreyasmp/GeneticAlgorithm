@@ -12,9 +12,9 @@ import java.util.Collections;
 public class Tour {
 
     // holds our tour of cities
-    private ArrayList<City> tour = new ArrayList<>();
-    private double fitness = 0.0;
-    private int distance = 0;
+    protected ArrayList<City> tour = new ArrayList<>();
+    protected double fitness = 0.0;
+    protected int distance = 0;
 
     // construct a blank tour
     Tour() {
