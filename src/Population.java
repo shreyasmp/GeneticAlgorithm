@@ -8,7 +8,7 @@
 public class Population {
 
     // Holds population ot tours
-    private Tour[] tours;
+    protected Tour[] tours;
 
     // Construct a population
     Population(int populationSize, boolean initialise) {
